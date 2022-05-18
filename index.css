@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2A0944;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+div.demo {
+    width: 510px;
+    height: 260px;
+    box-shadow: 10px 10px 20px #0000008c;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.demo::before{
+    content: "";
+    /* override the gradient here */
+    background-image: conic-gradient(
+        cornflowerblue 35deg,
+        #821BD1 70deg,
+        #FEA920 100deg,  
+        #FEA920 120deg,
+        #FEA920 140deg,
+      transparent 160deg
+    );
+    width: 150%;
+    height: 80%;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+  }
+  div.demo::after{
+    content: "NFT GUARD PROJECT";
+    width: 490px;
+    height: 240px;
+    background: #101010;
+    position: absolute;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f4f5;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset #0000008c;
+  }
+  @keyframes rotate {
+    0%{
+      transform: rotate(-360deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+  }
